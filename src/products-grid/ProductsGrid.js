@@ -51,25 +51,31 @@ export const ProductsGridComponent = params => {
         </Grid>
       </Grid>
 
-      <FadeIn 
+      <FadeIn
         show={params.loading}
         exitOptions={{ position: 'absolute' }}>
         <CircularProgress className={classes.loader} />
       </FadeIn>
-  
+
       <div className={classes.items}>
+          {
+            !params.loading && params.items && params.items.length === 0 &&
+              <div className='no-products-found'>
+                  No products found
+              </div>
+          }
         {
           !params.loading &&
           params.items.map(item => <Product key={item.id} item={item} />)
         }
       </div>
-  
+
       <FadeIn show={params.items.length && !params.loading}>
         <Pager />
       </FadeIn>
     </div>
   );
-};
+}
 
 const ProductsGrid = connect(
   state => ({

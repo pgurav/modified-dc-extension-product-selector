@@ -7,7 +7,7 @@
     .MuiCardActionArea-focusHighlight {
       opacity: 0.08;
     }
-  }  
+  }
 }
 .selected-products {
   .MuiCardHeader-content {
@@ -20,3 +20,9 @@
 .MuiCardActionArea-root {
   margin-top: auto !important;
 }
+
+.no-products-found{
+  font-size:16px;
+  color:#FF0000;
+}
+

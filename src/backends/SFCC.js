@@ -79,6 +79,15 @@ export class SFCC {
   }
 
   exportItem(item) {
-    return item.id;
+    console.log('export items',item)
+    return {
+      id: item.id,
+      name : item.name,
+      image : item.image,
+      price : item.price,
+      gender : item.gender ? item.gender : "",
+      master_id : item.master_id ? item.master_id : "",
+      orderable : item.orderable
+    }
   }
 }
