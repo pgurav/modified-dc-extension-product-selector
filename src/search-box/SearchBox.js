@@ -29,6 +29,9 @@ const styles = makeStyles(theme => ({
     height: 28,
     margin: 4
   }
+  no-products-found: {
+    display: block
+  }
 }));
 
 const debouncedSearch = debounce(async (setGlobalError, changePage) => {
