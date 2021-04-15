@@ -64,7 +64,8 @@ export const ProductsGridComponent = params => {
                 params items ==> {params.items}
                 length ==> {params.items.length}
                 item Id ==> {item.id}
-                  No products found by Priyanka
+                item Id Second ==> {params.item.id}
+                  No products found by Priyanka G
                 }
                 }
               </div>
