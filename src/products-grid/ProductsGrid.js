@@ -63,8 +63,7 @@ export const ProductsGridComponent = params => {
               <div className='no-products-found'>
                 params items ==> {params.items}
                 length ==> {params.items.length}
-                item Id ==> {item.id}
-                item Id Second ==> {params.item.id}
+                item Id Second ==> {params.items.item.id}
                   No products found by Priyanka G
                 }
                 }
