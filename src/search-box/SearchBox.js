@@ -28,9 +28,6 @@ const styles = makeStyles(theme => ({
   divider: {
     height: 28,
     margin: 4
-  },
-  no-products-found: {
-    display: block
   }
 }));
 

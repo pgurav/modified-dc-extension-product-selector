@@ -60,9 +60,9 @@ export const ProductsGridComponent = params => {
 
       <div className={classes.items}>
           {
-            !params.loading && params.items && params.items.length === 0 &&
+            !params.loading && params.items && params.items.length === 0 && params.searchText != "" &&
               <div className='no-products-found'>
-                  No products found by Priyanka G
+                  No products found by Priyanka searchtext check
               </div>
           }
         {
@@ -84,7 +84,8 @@ const ProductsGrid = connect(
     loading: state.isFetching,
     initialised: state.initialised,
     catalogs: state.params.catalogs,
-    backend: state.backend
+    backend: state.backend,
+    searchText: state.searchText
   }),
   null
 )(ProductsGridComponent);
