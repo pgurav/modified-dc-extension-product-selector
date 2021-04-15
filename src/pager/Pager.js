@@ -2,9 +2,9 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { ButtonGroup, Button, makeStyles } from '@material-ui/core';
 import { SkipNext, SkipPrevious, ArrowRight, ArrowLeft } from '@material-ui/icons';
-
+import take from 'lodash/take';
 import range from 'lodash/range';
-
+import takeRight from 'lodash/takeRight';
 import { changePage } from '../store/pages/pages.actions';
 
 const styles = makeStyles(theme => ({
