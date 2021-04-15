@@ -59,9 +59,13 @@ export const ProductsGridComponent = params => {
 
       <div className={classes.items}>
           {
-            !params.loading && !params.items && params.items.length === 0 &&
+            !params.loading && params.items && params.items.length === 0 &&
               <div className='no-products-found'>
+                params items ==> {params.items}
+                length ==> {params.items.length}
                   No products found by Priyanka
+                }
+                }
               </div>
           }
         {
