@@ -18,15 +18,12 @@ export const PagerComponent = ({ changePage, page: { numPages, curPage } }) => {
   const allPages = range(numPages);
   let pages = [];
 
-  { 
-    allPages.length > 20 &&
+  if (allPages.length > 20) {
     pages = Math.round(allPages.length / 20);
-  }
-  {
+  } else {
     pages = 0;
   }
   
-
   return (
     <ButtonGroup color="primary" className={classes.root}>
       <Button aria-label="first" onClick={() => changePage(0)} disabled={curPage === 0}>
