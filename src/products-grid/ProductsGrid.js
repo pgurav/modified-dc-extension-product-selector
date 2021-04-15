@@ -1,12 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { CircularProgress, Grid, makeStyles } from '@material-ui/core';
+import {searchText} from './search-box/SearchBox';
 
 import Pager from '../pager/Pager';
 import FadeIn from '../fade-in/FadeIn';
 import Product from '../product/Product';
 import CatalogSelector from '../catalog-selector/CatalogSelector';
 import PaginationSummary from '../pagination-summary/PaginationSummary';
+
 
 const styles = makeStyles(theme => ({
   root: {
@@ -61,9 +63,8 @@ export const ProductsGridComponent = params => {
           {
             !params.loading && params.items && params.items.length === 0 &&
               <div className='no-products-found'>
+                searchtext ==> {searchText}
                   No products found by Priyanka G
-                }
-                }
               </div>
           }
         {

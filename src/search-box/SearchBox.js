@@ -73,4 +73,5 @@ const SearchBox = connect(
   { changePage, setSearchText, setGlobalError }
 )(SearchBoxComponent);
 
+export {searchText};
 export default SearchBox;
