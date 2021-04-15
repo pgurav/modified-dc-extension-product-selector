@@ -18,7 +18,13 @@ export const PagerComponent = ({ changePage, page: { numPages, curPage } }) => {
   const allPages = range(numPages);
   let pages = [];
 
-  pages = Math.round(allPages.length / 20);
+  { allPages.length > 20 &&
+    pages = Math.round(allPages.length / 20);
+  }
+  {
+    pages = 0;
+  }
+  
 
   return (
     <ButtonGroup color="primary" className={classes.root}>
