@@ -18,10 +18,14 @@ export const PagerComponent = ({ changePage, page: { numPages, curPage } }) => {
   const allPages = range(numPages);
   let pages = [];
 
-  if (allPages.length > 20) {
-    pages = Math.round(allPages.length / 20);
+  if (curPage - NUM_START_PAGES < 0) {
+    pages = take(allPages, NUM_VISIBLE_PAGES);
+  } else if (curPage + NUM_END_PAGES > numPages) {
+    pages = takeRight(allPages, NUM_VISIBLE_PAGES);
   } else {
-    pages = 1;
+    const startPages = range(curPage - NUM_START_PAGES, curPage);
+    const endPages = range(curPage, curPage + NUM_END_PAGES);
+    pages = take([...startPages, ...endPages], NUM_VISIBLE_PAGES);
   }
   
   return (
