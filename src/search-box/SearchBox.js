@@ -7,8 +7,6 @@ import { changePage } from '../store/pages/pages.actions';
 import { setSearchText } from '../store/searchText/searchText.actions';
 import { setGlobalError } from '../store/global-error/global-error.actions';
 
-const searchText;
-
 const styles = makeStyles(theme => ({
   root: {
     width: '100%',
@@ -45,7 +43,7 @@ export const SearchBoxComponent = params => {
   const classes = styles();
 
   const search = event => {
-    searchText = !isUndefined(event.target.value) ? event.target.value : params.searchText;
+    const searchText = !isUndefined(event.target.value) ? event.target.value : params.searchText;
     params.setSearchText(trim(searchText));
     debouncedSearch(params.setGlobalError, params.changePage);
   };

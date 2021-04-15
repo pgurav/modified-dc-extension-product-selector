@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { CircularProgress, Grid, makeStyles } from '@material-ui/core';
 
 
-import {SearchBoxComponent} from '../search-box/SearchBox';
+import SearchBoxComponent from '../search-box/SearchBox';
 import Pager from '../pager/Pager';
 import FadeIn from '../fade-in/FadeIn';
 import Product from '../product/Product';
@@ -64,8 +64,10 @@ export const ProductsGridComponent = params => {
           {
             !params.loading && params.items && params.items.length === 0 &&
               <div className='no-products-found'>
+                setSearchText ==>  {setSearchText}
                 searchtext ==> {searchText}
                   No products found by Priyanka G
+                }
               </div>
           }
         {
