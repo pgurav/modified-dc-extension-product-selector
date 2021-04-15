@@ -62,7 +62,7 @@ export const ProductsGridComponent = params => {
           {
             !params.loading && params.items && params.items.length === 0 && params.searchText !== "" &&
               <div className='no-products-found'>
-                  No products found by Priyanka searchtext check
+                  No products found
               </div>
           }
         {
