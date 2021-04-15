@@ -61,9 +61,6 @@ export const ProductsGridComponent = params => {
           {
             !params.loading && params.items && params.items.length === 0 &&
               <div className='no-products-found'>
-                params items ==> {params.items}
-                length ==> {params.items.length}
-                item Id Second ==> {params.items.item.id}
                   No products found by Priyanka G
                 }
                 }
