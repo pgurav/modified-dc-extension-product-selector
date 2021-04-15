@@ -21,7 +21,7 @@ export const PagerComponent = ({ changePage, page: { numPages, curPage } }) => {
   if (allPages.length > 20) {
     pages = Math.round(allPages.length / 20);
   } else {
-    pages = 0;
+    pages = 1;
   }
   
   return (
