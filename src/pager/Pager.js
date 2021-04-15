@@ -18,7 +18,8 @@ export const PagerComponent = ({ changePage, page: { numPages, curPage } }) => {
   const allPages = range(numPages);
   let pages = [];
 
-  { allPages.length > 20 &&
+  { 
+    allPages.length > 20 &&
     pages = Math.round(allPages.length / 20);
   }
   {
