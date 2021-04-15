@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { CircularProgress, Grid, makeStyles } from '@material-ui/core';
 import {SearchBoxComponent} from '../search-box/SearchBox';
 
+
 import Pager from '../pager/Pager';
 import FadeIn from '../fade-in/FadeIn';
 import Product from '../product/Product';
