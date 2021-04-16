@@ -14,7 +14,8 @@ const PaginationSummary = connect(
   state => ({
     total: state.page.total,
     curPage: state.page.curPage,
-    PAGE_SIZE: state.PAGE_SIZE
+    PAGE_SIZE: state.PAGE_SIZE,
+    items: state.items
   }),
   {}
 )(PaginationSummaryComponent);
