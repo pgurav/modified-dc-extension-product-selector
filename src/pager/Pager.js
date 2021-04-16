@@ -13,7 +13,7 @@ const styles = makeStyles(theme => ({
   }
 }));
 
-export const PagerComponent = ({ changePage, page: { numPages, curPage } }) => {
+export const PagerComponent = ({ changePage, page: { numPages, curPage, total } }) => {
   const classes = styles();
   const NUM_START_PAGES = 3;
   const NUM_END_PAGES = 3;
@@ -32,7 +32,7 @@ export const PagerComponent = ({ changePage, page: { numPages, curPage } }) => {
   }
   
 
-  if (items.length > 20) {
+  if (total > 20) {
     return (
       <ButtonGroup color="primary" className={classes.root}>
         <Button aria-label="first" onClick={() => changePage(0)} disabled={curPage === 0}>
@@ -54,19 +54,7 @@ export const PagerComponent = ({ changePage, page: { numPages, curPage } }) => {
         </Button>
       </ButtonGroup>
     );
-  } else {
-    return (
-      <ButtonGroup color="primary" className={classes.root}>
-        {pages.map(page => (
-          <Button variant={page === curPage ? 'contained' : null} key={page} onClick={() => changePage(page)}>
-            {page + 1}
-          </Button>
-        ))}
-      </ButtonGroup>
-    );
   }
-  
-  
 };
 
 const Pager = connect(state => ({ page: state.page }), { changePage })(PagerComponent);
