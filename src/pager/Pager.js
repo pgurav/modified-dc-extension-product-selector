@@ -54,6 +54,10 @@ export const PagerComponent = ({ changePage, page: { numPages, curPage, total } 
         </Button>
       </ButtonGroup>
     );
+  } else {
+    return (
+      <ButtonGroup color="primary" className={classes.root}></ButtonGroup>
+    );
   }
 };
 
