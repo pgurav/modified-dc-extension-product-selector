@@ -31,19 +31,23 @@ export const PagerComponent = ({ changePage, page: { numPages, curPage } }) => {
     pages = take([...startPages, ...endPages], NUM_VISIBLE_PAGES);
   }
   
+
   return (
     <ButtonGroup color="primary" className={classes.root}>
+
+    {pages.map(page => (
+        <Button variant={page === curPage ? 'contained' : null} key={page} onClick={() => changePage(page)}>
+          {page + 1}
+        </Button>
+      ))}
+      
       <Button aria-label="first" onClick={() => changePage(0)} disabled={curPage === 0}>
         <SkipPrevious fontSize="small" />
       </Button>
       <Button aria-label="previous" onClick={() => changePage(curPage - 1)} disabled={curPage === 0}>
         <ArrowLeft fontSize="small" />
       </Button>
-      {pages.map(page => (
-        <Button variant={page === curPage ? 'contained' : null} key={page} onClick={() => changePage(page)}>
-          {page + 1}
-        </Button>
-      ))}
+      
       <Button aria-label="next" onClick={() => changePage(curPage + 1)} disabled={curPage === numPages - 1}>
         <ArrowRight fontSize="small" />
       </Button>
