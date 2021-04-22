@@ -42,6 +42,12 @@ export const ProductComponent = params => {
 	const { readOnly } = params.SDK.form;
 	const toggle = () => params.toggleProduct(params.item, isSelected);
 
+	let inventoryStatus;
+	if (params.item.orderable == "true") {
+		inventoryStatus = "In Stock"
+	} else {
+		inventoryStatus = "Out Of Stock"
+	}
 	const hideProduct = () => {
 		setVisible(true);
 		toggle();
@@ -93,6 +99,7 @@ export const ProductComponent = params => {
 					action={isRemovable && <CardAction />}
 					title={params.item.name}
 					subheader={'Product ID: ' + params.item.id + params.item.orderable}
+					subheader={'Inventory: ' + inventoryStatus}
 					titleTypographyProps={{ variant: 'subtitle1' }}
 					subheaderTypographyProps={{ variant: 'body2' }}/>
 
