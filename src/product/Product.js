@@ -98,8 +98,7 @@ export const ProductComponent = params => {
 				<CardHeader
 					action={isRemovable && <CardAction />}
 					title={params.item.name}
-					subheader={'Product ID: ' + params.item.id + params.item.orderable}
-					subheader={'Inventory: ' + inventoryStatus}
+					subheader={'Product ID: ' + params.item.id + inventoryStatus}
 					titleTypographyProps={{ variant: 'subtitle1' }}
 					subheaderTypographyProps={{ variant: 'body2' }}/>
 
