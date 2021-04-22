@@ -42,12 +42,6 @@ export const ProductComponent = params => {
 	const { readOnly } = params.SDK.form;
 	const toggle = () => params.toggleProduct(params.item, isSelected);
 
-	let inventoryStatus;
-	if (params.item.orderable === "true") {
-		inventoryStatus = "In Stock"
-	} else {
-		inventoryStatus = "Out Of Stock"
-	}
 	const hideProduct = () => {
 		setVisible(true);
 		toggle();
