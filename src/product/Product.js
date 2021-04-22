@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { Clear } from '@material-ui/icons';
-import { Card, CardActionArea, CardMedia, CardHeader, CardContent, IconButton, makeStyles } from '@material-ui/core';
+import { Card, CardActionArea, CardMedia, CardHeader, CardContent, Typography, IconButton, makeStyles } from '@material-ui/core';
 import { toggleProduct } from '../store/selectedItems/selectedItems.actions';
 
 import find from 'lodash/find';
