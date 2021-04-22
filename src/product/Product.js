@@ -98,10 +98,12 @@ export const ProductComponent = params => {
 				<CardHeader
 					action={isRemovable && <CardAction />}
 					title={params.item.name}
-					subheader={'Product ID: ' + params.item.id + inventoryStatus}
+					subheader={'Product ID: ' + params.item.id}
 					titleTypographyProps={{ variant: 'subtitle1' }}
 					subheaderTypographyProps={{ variant: 'body2' }}/>
-
+				<CardContent
+					Typography={'Inventory: ' + inventoryStatus}
+				/>
 				{cardBody}
 			</Card>
 		</FadeIn>
