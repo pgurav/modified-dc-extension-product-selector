@@ -103,7 +103,7 @@ export const ProductComponent = params => {
 					subheaderTypographyProps={{ variant: 'body2' }}/>
 				<CardContent>
 					<Typography variant="body2" color="textSecondary" component="p">
-          				Product {inventoryStatus + params.item.orderable}
+          				Product {params.item.orderable ? "In Stock": "Out Of Stock"}
         			</Typography>
 				</CardContent>
 				{cardBody}
