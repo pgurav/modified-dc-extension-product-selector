@@ -84,11 +84,11 @@ export class SFCC {
       id: item.id,
       name : item.name,
       image : item.image,
-      price : item.price,
+      price : item.price ? item.price : "",
       gender : item.gender ? item.gender : "",
       master_id : item.master_id ? item.master_id : "",
-      orderable : item.orderable,
-      inventory : item.in_stock
+      orderable : item.orderable ? item.orderable : "",
+      inventory : item.in_stock ? item.in_stock : "",
     }
   }
 }
