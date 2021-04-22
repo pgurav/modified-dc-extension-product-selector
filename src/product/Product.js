@@ -101,9 +101,11 @@ export const ProductComponent = params => {
 					subheader={'Product ID: ' + params.item.id}
 					titleTypographyProps={{ variant: 'subtitle1' }}
 					subheaderTypographyProps={{ variant: 'body2' }}/>
-				<CardContent
-					Typography={'Inventory: ' + inventoryStatus}
-				/>
+				<CardContent>
+					<Typography variant="body2" color="textSecondary" component="p">
+          				Product {inventoryStatus}
+        			</Typography>
+				</CardContent>
 				{cardBody}
 			</Card>
 		</FadeIn>
