@@ -87,7 +87,8 @@ export class SFCC {
       price : item.price,
       gender : item.gender ? item.gender : "",
       master_id : item.master_id ? item.master_id : "",
-      orderable : item.orderable
+      orderable : item.orderable,
+      inventory : item.in_stock
     }
   }
 }
